@@ -38,25 +38,29 @@ const Navigation = () => {
       <nav className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="flex space-x-8">
-            <Link href="/">
-              <a className={`py-4 px-1 border-b-2 ${isActive("/") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}>
-                Calculator
-              </a>
+            <Link 
+              href="/"
+              className={`py-4 px-1 border-b-2 ${isActive("/") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}
+            >
+              Calculator
             </Link>
-            <Link href="/3d-view">
-              <a className={`py-4 px-1 border-b-2 ${isActive("/3d-view") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}>
-                3D View
-              </a>
+            <Link 
+              href="/3d-view"
+              className={`py-4 px-1 border-b-2 ${isActive("/3d-view") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}
+            >
+              3D View
             </Link>
-            <Link href="/learn">
-              <a className={`py-4 px-1 border-b-2 ${isActive("/learn") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}>
-                Learn
-              </a>
+            <Link 
+              href="/learn"
+              className={`py-4 px-1 border-b-2 ${isActive("/learn") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}
+            >
+              Learn
             </Link>
-            <Link href="/challenge">
-              <a className={`py-4 px-1 border-b-2 ${isActive("/challenge") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}>
-                Challenge
-              </a>
+            <Link 
+              href="/challenge"
+              className={`py-4 px-1 border-b-2 ${isActive("/challenge") ? "border-blue-500 text-gray-900 dark:text-white" : "border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300"} font-medium text-sm transition-colors`}
+            >
+              Challenge
             </Link>
           </div>
         </div>

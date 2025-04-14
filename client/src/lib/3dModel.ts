@@ -97,18 +97,97 @@ export const setupCalculator3DModel = () => {
     }
   }
   
-  // Create a simplified protective case
-  const caseGeometry = new THREE.BoxGeometry(6.2, 12.2, 0.8);
+  // Create a more realistic slide-on protective case
+  // Main case body
+  const caseGeometry = new THREE.BoxGeometry(6.5, 12.5, 0.6);
   const caseMaterial = new THREE.MeshPhongMaterial({ 
-    color: 0x555555,
-    specular: 0x777777,
-    shininess: 10,
-    transparent: true,
-    opacity: 0.8
+    color: 0x1e467a, // Dark blue color similar to Casio cases
+    specular: 0x444444,
+    shininess: 30,
+    transparent: false
   });
   const caseBody = new THREE.Mesh(caseGeometry, caseMaterial);
-  caseBody.position.set(0, 0, -0.2);
+  caseBody.position.set(0, 0, -0.3);
   caseGroup.add(caseBody);
+  
+  // Cut out a hole in the front of the case to see the calculator
+  const cutoutGeometry = new THREE.BoxGeometry(5.8, 11.8, 0.7);
+  const cutoutMaterial = new THREE.MeshBasicMaterial({
+    color: 0x000000,
+    transparent: true,
+    opacity: 0 // Completely transparent
+  });
+  const cutout = new THREE.Mesh(cutoutGeometry, cutoutMaterial);
+  cutout.position.set(0, 0, 0.1);
+  caseBody.add(cutout);
+  
+  // Add case edges/ridges
+  const edgeGeometry = new THREE.BoxGeometry(6.7, 0.3, 0.7);
+  const edgeMaterial = new THREE.MeshPhongMaterial({ 
+    color: 0x1e467a,
+    specular: 0x666666,
+    shininess: 50
+  });
+  
+  // Top edge
+  const topEdge = new THREE.Mesh(edgeGeometry, edgeMaterial);
+  topEdge.position.set(0, 6.3, -0.2);
+  caseGroup.add(topEdge);
+  
+  // Bottom edge
+  const bottomEdge = new THREE.Mesh(edgeGeometry, edgeMaterial);
+  bottomEdge.position.set(0, -6.3, -0.2);
+  caseGroup.add(bottomEdge);
+  
+  // Add slide rails on the sides (subtle detail)
+  const railGeometry = new THREE.BoxGeometry(0.2, 12.5, 0.4);
+  const railMaterial = new THREE.MeshPhongMaterial({ 
+    color: 0x173762, // Slightly darker blue
+    specular: 0x333333,
+    shininess: 40
+  });
+  
+  // Left rail
+  const leftRail = new THREE.Mesh(railGeometry, railMaterial);
+  leftRail.position.set(-3.3, 0, -0.2);
+  caseGroup.add(leftRail);
+  
+  // Right rail
+  const rightRail = new THREE.Mesh(railGeometry, railMaterial);
+  rightRail.position.set(3.3, 0, -0.2);
+  caseGroup.add(rightRail);
+  
+  // Add "CASIO" branding to the case
+  const createCaseBranding = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 256;
+    canvas.height = 64;
+    const context = canvas.getContext('2d');
+    
+    if (context) {
+      context.fillStyle = 'white';
+      context.font = 'Bold 36px Arial';
+      context.fillText('CASIO', 10, 40);
+    }
+    
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+    
+    const material = new THREE.MeshBasicMaterial({
+      map: texture,
+      transparent: true
+    });
+    
+    const geometry = new THREE.PlaneGeometry(2, 0.5);
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(0, 5, 0);
+    mesh.rotation.set(0, Math.PI, 0); // Rotate to face back
+    
+    return mesh;
+  };
+  
+  // Add branding to the case
+  caseGroup.add(createCaseBranding());
   
   // Create text labels for the calculator (Casio logo)
   const createTextLabel = () => {

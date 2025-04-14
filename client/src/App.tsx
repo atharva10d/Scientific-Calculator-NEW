@@ -9,6 +9,8 @@ import Calculator from "@/pages/Calculator";
 import View3D from "@/pages/View3D";
 import Learn from "@/pages/Learn";
 import Challenge from "@/pages/Challenge";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { CalculatorProvider } from "@/context/CalculatorContext";
 
 function Router() {
   return (
@@ -24,16 +26,20 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-        <Navigation />
-        <main className="flex-grow container mx-auto p-4 md:p-6 flex">
-          <Router />
-        </main>
-        <Footer />
-      </div>
-      <Toaster />
-    </QueryClientProvider>
+    <ThemeProvider>
+      <CalculatorProvider>
+        <QueryClientProvider client={queryClient}>
+          <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+            <Navigation />
+            <main className="flex-grow container mx-auto p-4 md:p-6 flex">
+              <Router />
+            </main>
+            <Footer />
+          </div>
+          <Toaster />
+        </QueryClientProvider>
+      </CalculatorProvider>
+    </ThemeProvider>
   );
 }
 
