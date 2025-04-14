@@ -1,0 +1,258 @@
+Project Title:
+Web-Based Scientific Calculator Simulator (Casio FX-991ES Plus 2nd Edition)
+
+Objective:
+Develop a fully responsive, web-based application that accurately simulates the Casio FX-991ES Plus 2nd Edition scientific calculator. The project should replicate the physical calculator’s interface, operations, and advanced features, while also integrating modern web functionalities such as a 3D viewer, interactive tutorials, and gamified learning modules.
+
+Functional Requirements:
+Scientific Calculator Simulation:
+
+Replicate the physical layout and functionality of the Casio FX-991ES Plus 2nd Edition.
+
+Include dual-line display for input and output.
+
+Support all calculator modes: Basic, Scientific, Statistical, Matrix, Equation, Complex Numbers, Table Generation, and Integration.
+
+Implement SHIFT and ALPHA key states with dynamic key behavior.
+
+Provide full keyboard binding support.
+
+Allow users to toggle modes, memory operations, and setup preferences.
+
+Interactive History:
+
+Maintain and display a history panel of the last 10–20 calculations.
+
+Allow users to reuse or delete past entries.
+
+3D Calculator Viewer:
+
+Develop a fully interactive 3D model using Three.js or Spline.
+
+Enable 360-degree rotation, zoom, and pan.
+
+Provide options to toggle protective case visibility.
+
+Add hotspots and labels for major parts like the solar panel, button sections, and display.
+
+Educational Tutorials:
+
+Dedicated "Learn" section for tutorials on features such as matrices, fractions, integrals, base conversions, and equation solving.
+
+Include step-by-step walkthroughs, tooltips, embedded calculator examples, and collapsible “explain” boxes.
+
+Use multimedia content (images, animations, screen recordings) for demonstration.
+
+Challenge Mode (Gamified Learning):
+
+Provide quiz-based challenges with timers and scoring.
+
+Include question types such as:
+
+Solve a math expression.
+
+Identify required calculator mode for a task.
+
+Time-bound conversions and equation solving.
+
+Implement a local leaderboard (optionally backed by a database).
+
+Store name, score, and timestamp for performance tracking.
+
+User Interface and Experience (UI/UX):
+Design a clean, accessible, mobile-first interface.
+
+Style using Tailwind CSS or Bootstrap for responsive layout and consistency.
+
+Emphasize realism in calculator design to mirror the original hardware, including:
+
+Button colors (e.g., yellow for SHIFT, red for ALPHA).
+
+Typographic similarity using monospace or system fonts.
+
+Glow or highlight for toggled buttons.
+
+Provide theme toggle for light and dark modes.
+
+Implement subtle hover and click animations using Framer Motion or CSS transitions.
+
+Ensure cross-browser compatibility.
+
+Technical Stack:
+Frontend:
+
+HTML5, CSS3 (Tailwind CSS or Bootstrap), JavaScript
+
+Framework: React.js (preferred) or Vue.js
+
+Additional Libraries:
+
+Three.js or Spline (for 3D model integration)
+
+Framer Motion (for animations)
+
+Math.js or a custom parser (for scientific calculations)
+
+KaTeX or MathJax (for math expression rendering)
+
+Backend (Optional):
+
+Node.js with Express.js or Django with Django REST Framework
+
+MongoDB or PostgreSQL
+
+RESTful API for:
+
+Challenge score submissions
+
+Fetching leaderboard data
+
+User authentication (optional)
+
+Firebase Storage or CDN for static assets (images, 3D models)
+
+Authentication (Optional Advanced Feature):
+
+Firebase Authentication or OAuth for Google Login
+
+Session and token management using JWT
+
+Pages and Routing:
+Home Page:
+
+Tagline and call-to-action buttons
+
+Navigation to Calculator, 3D View, Learn, and Challenge sections
+
+Theme toggle (light/dark)
+
+Footer with pricing and developer credit
+
+Calculator Page:
+
+Realistic scientific calculator interface
+
+SHIFT and ALPHA toggle behavior
+
+Dual-line display with KaTeX/MathJax rendering
+
+Responsive and touch-optimized UI
+
+Calculation logic engine with error detection
+
+History panel with editable entries
+
+View Page:
+
+Embedded 3D calculator model with OrbitControls
+
+Toggle protective case visibility
+
+Labels and hotspots
+
+Light/dark 3D view compatibility
+
+Learn Page:
+
+Navigation by topic (e.g., Fractions, Trigonometry, Statistics)
+
+Section-specific tutorials
+
+Embedded calculator interactions
+
+Practice sections with guided examples
+
+Challenge Page:
+
+Real-time quiz interface
+
+Timer, score, and question navigation
+
+Local leaderboard or connected backend
+
+Replay and difficulty selection
+
+Styling and Design Standards:
+Responsive layout using flex, grid, and breakpoints
+
+Color palette:
+
+Primary: Dark gray, black (calculator theme)
+
+Accents: Yellow (SHIFT), Red (ALPHA), Blue (Casio logo color)
+
+Light/dark theme variations with smooth transitions
+
+Typography: Inter, Roboto, or IBM Plex Mono
+
+Button styling:
+
+Realistic button shapes, spacing, and shadows
+
+Tactile hover and click effects
+
+Utility classes for rapid styling and accessibility
+
+Modular component design in React (buttons, display, panels)
+
+Folder Structure (Suggested):
+css
+Copy
+Edit
+/project-root
+├── public/
+│   └── assets/
+│       ├── images/
+│       ├── 3d-models/
+│       └── audio/
+├── src/
+│   ├── components/
+│   │   ├── Button.jsx
+│   │   ├── Display.jsx
+│   │   └── ShiftToggle.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Calculator.jsx
+│   │   ├── View3D.jsx
+│   │   ├── Learn.jsx
+│   │   └── Challenge.jsx
+│   ├── hooks/
+│   ├── context/
+│   └── App.js
+├── backend/ (if applicable)
+│   ├── server.js
+│   ├── routes/
+│   └── models/
+├── .env
+├── package.json
+├── tailwind.config.js
+└── README.md
+Deployment:
+Frontend Deployment: Vercel, Netlify, or GitHub Pages
+
+Backend Deployment (if used): Render, Railway, or Heroku
+
+Use environment variables for API endpoints and database connections
+
+Configure SEO, performance optimization, and responsive testing
+
+Deliverables:
+Fully functional web application replicating Casio FX-991ES Plus 2nd Edition
+
+Source code with clear structure and comments
+
+3D model integration with interactivity
+
+Complete tutorials and challenge mode
+
+Responsive styling with dark mode support
+
+Deployment link and documentation
+
+Optional: Admin panel to manage quizzes and tutorials
+
+Credits:
+Designed and developed by Atharva Zope
+Calculator inspiration based on Casio FX-991ES Plus 2nd Edition
+For educational and demonstrational use.
+

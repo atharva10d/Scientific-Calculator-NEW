@@ -1,0 +1,77 @@
+Main functions
+Random integers
+Fraction calculations
+Combination and permutation
+Statistics (List-based STAT data editor, standard deviation, regression analysis)
+9 variables
+Table function
+Comes with new slide-on hard case
+Equation calculations
+Integration/differential calculations
+Matrix calculations
+Vector calculations
+Complex number calculations
+CALC function
+SOLVE function
+Base- n calculation
+ Integration
+Integration
+
+ Complex number calculations
+Complex number calculations
+
+ Differential
+Differential
+
+ Vector
+Vector
+
+ Matrix operations
+Matrix operations
+
+ Learn More  
+Specifications
+Non Programmable
+Number of Functions : 417
+Number of Functions : 417
+Natural textbook display
+Natural textbook display
+Display expression same as textbook.
+DIGIT
+10 + 2 digits
+10-digit mantissa + 2-digit exponential display.
+Dot matrix display
+Dot matrix display
+High-resolution screen provides beautiful looking graphs every time.
+Multi-replay
+Multi-replay
+Quick and easy recall of previously executed formulas for editing and re-execution.
+Solar & Battery
+Solar & Battery
+Solar powered when light is sufficient, battery powered when light is insufficient.
+Plastic keys
+Plastic keys
+Designed and engineered for easy operation.
+Basic Mathematical Functions
+Trigonometric, Exponential logarithmic, etc.
+Table Generation
+You can create a numerical table based on that expression by registering a function expression. In addition, graph functions can be represented by graphs.
+Base-n calculation
+Binary/Octal/Hexadecimal
+Scientific Constants
+You can use constant symbols used in physics, science classes.
+Vector
+Basic Statistics
+Standard statistics functions such as Mean, SUM, Standard Deviation, and Regression
+List based STAT-data editor
+List based STAT-data editor
+Viewing and editing of input data in list format, showing data groups (x-data, y-data, frequency) and surrounding data.
+Differentiation
+Non Graphing
+Matrix
+Equation
+Integration
+Metric conversion function
+Metric conversion function
+You can convert a number in one unit to a number in a different unit.
+Complex number calculation
