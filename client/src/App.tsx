@@ -15,64 +15,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { CalculatorProvider } from "@/context/CalculatorContext";
 import { useTheme } from "@/context/ThemeContext";
 
-// Custom cursor component
-function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
-  useEffect(() => {
-    const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    const handleMouseOver = (e: MouseEvent) => {
-      if ((e.target as HTMLElement).tagName === 'A' || 
-          (e.target as HTMLElement).tagName === 'BUTTON' ||
-          (e.target as HTMLElement).closest('a') ||
-          (e.target as HTMLElement).closest('button')) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
-    };
-
-    window.addEventListener("mousemove", updatePosition);
-    window.addEventListener("mouseover", handleMouseOver);
-
-    return () => {
-      window.removeEventListener("mousemove", updatePosition);
-      window.removeEventListener("mouseover", handleMouseOver);
-    };
-  }, []);
-
-  // Hide default cursor on desktop
-  useEffect(() => {
-    // Only apply on non-touch devices (desktop)
-    if (typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches) {
-      document.body.classList.add('custom-cursor-active');
-    }
-    
-    return () => {
-      document.body.classList.remove('custom-cursor-active');
-    };
-  }, []);
-
-  // Only show on desktop
-  if (typeof window !== 'undefined' && !window.matchMedia('(pointer: fine)').matches) {
-    return null;
-  }
-
-  return (
-    <div
-      className={`custom-cursor ${isHovering ? 'cursor-hover' : ''}`}
-      style={{ 
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: isHovering ? 'scale(1.5)' : 'scale(1)'
-      }}
-    />
-  );
-}
+// Custom cursor removed as requested
 
 function Router() {
   return (
@@ -132,7 +75,6 @@ function AppContent() {
         </main>
         <Footer />
       </div>
-      <CustomCursor />
       <Toaster />
     </>
   );

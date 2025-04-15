@@ -83,7 +83,7 @@ const Home = () => {
               Special Offer!
             </div>
             <img 
-              src="/attached_assets/image_1744686709616.png" 
+              src="/attached_assets/image_1744690199874.png" 
               alt="Casio FX-991ES Plus 2nd Edition Calculator with Case" 
               className="w-full h-auto object-contain rounded-lg"
             />

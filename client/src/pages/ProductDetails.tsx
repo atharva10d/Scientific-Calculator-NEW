@@ -24,7 +24,7 @@ const ProductDetails = () => {
           <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900 dark:to-gray-800 p-8 flex flex-col md:flex-row items-center gap-8 transition-colors duration-300">
             <div className="flex-shrink-0 w-64 h-64 bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 flex items-center justify-center transition-colors duration-300">
               <img 
-                src="/attached_assets/image_1744686709616.png" 
+                src="/attached_assets/image_1744690199874.png" 
                 alt="Casio FX-991ES Plus 2nd Edition Calculator" 
                 className="max-w-full max-h-full object-contain"
               />
