@@ -25,6 +25,19 @@ const Home = () => {
             including calculus, statistics, and complex number calculations.
           </motion.p>
           
+          <motion.div
+            className="flex items-center gap-3 mt-3 bg-blue-50 dark:bg-blue-900/30 p-3 rounded-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+          >
+            <span className="text-2xl font-bold text-gray-900 dark:text-white">₹1,229</span>
+            <span className="text-lg line-through text-gray-500">₹1,395</span>
+            <span className="text-sm bg-green-100 text-green-800 px-2 py-0.5 rounded dark:bg-green-900 dark:text-green-200">
+              Save ₹166
+            </span>
+          </motion.div>
+          
           <motion.div 
             className="flex flex-wrap gap-4 pt-4"
             initial={{ opacity: 0, y: 20 }}
@@ -39,6 +52,11 @@ const Home = () => {
             <Link href="/3d-view">
               <a className="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors shadow-md">
                 View 3D Model
+              </a>
+            </Link>
+            <Link href="/product-details">
+              <a className="px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors shadow-md">
+                View Product Details
               </a>
             </Link>
             <Link href="/learn">
@@ -60,27 +78,15 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="w-full max-w-md relative">
-            <div className="calculator-shadow rounded-3xl overflow-hidden">
-              <svg width="100%" height="100%" viewBox="0 0 380 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="380" height="800" rx="24" fill="#333333" />
-                <rect x="20" y="30" width="340" height="60" rx="4" fill="#222222" />
-                <text x="30" y="50" fill="white" fontSize="18" fontWeight="bold">CASIO</text>
-                <text x="30" y="70" fill="#AAAAAA" fontSize="12">fx-991ES PLUS</text>
-                <text x="250" y="70" fill="#AAAAAA" fontSize="12" textAnchor="end">2nd edition</text>
-                <rect x="260" y="40" width="80" height="20" rx="2" fill="url(#solar-gradient)" />
-                
-                <rect x="20" y="100" width="340" height="120" rx="4" fill="#E6F4F1" />
-                <text x="330" y="190" fill="#000000" fontSize="28" textAnchor="end">0</text>
-                
-                <defs>
-                  <linearGradient id="solar-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#444444" />
-                    <stop offset="100%" stopColor="#222222" />
-                  </linearGradient>
-                </defs>
-              </svg>
+          <div className="w-full max-w-md relative bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div className="absolute -top-3 -right-3 bg-red-500 text-white px-3 py-1 rounded-full z-10 text-sm font-bold animate-pulse shadow-md">
+              Special Offer!
             </div>
+            <img 
+              src="/attached_assets/image_1744686709616.png" 
+              alt="Casio FX-991ES Plus 2nd Edition Calculator with Case" 
+              className="w-full h-auto object-contain rounded-lg"
+            />
             
             <div className="absolute bottom-6 right-6 bg-blue-500 text-white p-3 rounded-full shadow-lg animate-pulse">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -129,7 +135,7 @@ const Home = () => {
       </motion.div>
       
       <motion.div 
-        className="mt-16 bg-gray-50 dark:bg-gray-800/50 p-8 rounded-lg"
+        className="mt-16 bg-blue-50 dark:bg-blue-900/20 p-8 rounded-lg"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}

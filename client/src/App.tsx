@@ -9,6 +9,7 @@ import Calculator from "@/pages/Calculator";
 import View3D from "@/pages/View3D";
 import Learn from "@/pages/Learn";
 import Challenge from "@/pages/Challenge";
+import ProductDetails from "@/pages/ProductDetails";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { CalculatorProvider } from "@/context/CalculatorContext";
 
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/3d-view" component={View3D} />
       <Route path="/learn" component={Learn} />
       <Route path="/challenge" component={Challenge} />
+      <Route path="/product-details" component={ProductDetails} />
       <Route component={NotFound} />
     </Switch>
   );
