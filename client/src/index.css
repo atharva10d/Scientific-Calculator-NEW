@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'CalculatorDisplay';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+  font-display: swap;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -11,5 +17,143 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Casio FX-991ES Plus 2nd Edition Specific Styling */
+  .calc-body {
+    @apply bg-gradient-to-b from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800;
+    @apply border border-slate-400 dark:border-slate-600;
+    @apply rounded-lg overflow-hidden shadow-lg;
+    @apply relative select-none;
+  }
+  
+  .calc-brand {
+    @apply absolute top-2 left-4 text-xs font-bold text-slate-600 dark:text-slate-300;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.05em;
+  }
+  
+  .calc-model {
+    @apply absolute top-2 right-4 text-xs font-bold text-blue-600 dark:text-blue-400;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .calc-solar {
+    @apply absolute top-12 right-5 w-20 h-6 bg-slate-800 dark:bg-slate-900;
+    @apply rounded-sm overflow-hidden;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.2) 2px,
+      rgba(0, 0, 0, 0.2) 4px
+    );
+  }
+  
+  .bg-calc-display {
+    background-color: #e8f0e8; /* Slightly greenish background like Casio displays */
+    @apply dark:bg-green-900/20;
+    @apply border border-slate-400 dark:border-slate-600;
+    @apply rounded-md;
+  }
+  
+  .font-digit {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.03em;
+  }
+  
+  .natural-display {
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(0, 0, 0, 0.75);
+    @apply dark:text-gray-300;
+  }
+  
+  /* Calculator Button Styling */
+  .calc-btn {
+    @apply flex flex-col items-center justify-center p-1 rounded-md;
+    @apply relative overflow-hidden;
+    @apply transition-all duration-150;
+    @apply select-none cursor-pointer;
+    @apply text-center;
+    @apply shadow-sm;
+  }
+  
+  .calc-btn:active {
+    @apply transform scale-95 shadow-inner;
+  }
+  
+  /* Button Types */
+  .btn-number {
+    @apply bg-white dark:bg-slate-700;
+    @apply text-slate-800 dark:text-white;
+    @apply border border-slate-300 dark:border-slate-600;
+  }
+  
+  .btn-operator {
+    @apply bg-blue-50 dark:bg-blue-900/30;
+    @apply text-blue-700 dark:text-blue-200;
+    @apply border border-blue-200 dark:border-blue-800;
+  }
+  
+  .btn-function {
+    @apply bg-slate-100 dark:bg-slate-800;
+    @apply text-slate-700 dark:text-slate-200;
+    @apply border border-slate-300 dark:border-slate-700;
+  }
+  
+  .btn-clear {
+    @apply bg-red-50 dark:bg-red-900/30;
+    @apply text-red-700 dark:text-red-200;
+    @apply border border-red-200 dark:border-red-800;
+  }
+  
+  .btn-control {
+    @apply bg-yellow-50 dark:bg-yellow-900/30;
+    @apply text-yellow-800 dark:text-yellow-200;
+    @apply border border-yellow-200 dark:border-yellow-800;
+  }
+  
+  .btn-shift {
+    @apply bg-orange-50 dark:bg-orange-900/30;
+    @apply text-orange-700 dark:text-orange-200;
+    @apply border border-orange-200 dark:border-orange-800;
+  }
+  
+  .btn-alpha {
+    @apply bg-green-50 dark:bg-green-900/30;
+    @apply text-green-700 dark:text-green-200;
+    @apply border border-green-200 dark:border-green-800;
+  }
+  
+  /* Active state for shift and alpha buttons */
+  .shift-active .btn-shift,
+  .alpha-active .btn-alpha {
+    @apply bg-orange-600 dark:bg-orange-700;
+    @apply text-white;
+    @apply border-orange-700 dark:border-orange-600;
+    @apply font-bold;
+  }
+  
+  /* No scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Secondary labels on buttons */
+  .secondary-label {
+    @apply text-[0.6rem] text-blue-600 dark:text-blue-400;
+    @apply absolute top-0.5 left-0.5;
+  }
+  
+  .tertiary-label {
+    @apply text-[0.6rem] text-green-600 dark:text-green-400;
+    @apply absolute top-0.5 right-0.5;
   }
 }

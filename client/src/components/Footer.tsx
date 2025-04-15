@@ -50,28 +50,28 @@ const Footer = () => {
               <h4 className="subtitle text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/">
-                    <a className="hover-link text-gray-600 dark:text-gray-400 text-sm">Calculator</a>
+                  <Link href="/" className="hover-link text-gray-600 dark:text-gray-400 text-sm">
+                    Calculator
                   </Link>
                 </li>
                 <li>
-                  <Link href="/3d-view">
-                    <a className="hover-link text-gray-600 dark:text-gray-400 text-sm">3D View</a>
+                  <Link href="/3d-view" className="hover-link text-gray-600 dark:text-gray-400 text-sm">
+                    3D View
                   </Link>
                 </li>
                 <li>
-                  <Link href="/product-details">
-                    <a className="hover-link text-gray-600 dark:text-gray-400 text-sm">Product Details</a>
+                  <Link href="/product-details" className="hover-link text-gray-600 dark:text-gray-400 text-sm">
+                    Product Details
                   </Link>
                 </li>
                 <li>
-                  <Link href="/learn">
-                    <a className="hover-link text-gray-600 dark:text-gray-400 text-sm">Learn Functions</a>
+                  <Link href="/learn" className="hover-link text-gray-600 dark:text-gray-400 text-sm">
+                    Learn Functions
                   </Link>
                 </li>
                 <li>
-                  <Link href="/challenge">
-                    <a className="hover-link text-gray-600 dark:text-gray-400 text-sm">Take Challenge</a>
+                  <Link href="/challenge" className="hover-link text-gray-600 dark:text-gray-400 text-sm">
+                    Take Challenge
                   </Link>
                 </li>
               </ul>
