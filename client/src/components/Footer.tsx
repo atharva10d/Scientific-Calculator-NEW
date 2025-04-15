@@ -100,9 +100,22 @@ const Footer = () => {
               <p className="text-gray-500 dark:text-gray-400 text-xs">
                 Calculator inspiration based on Casio FX-991ES Plus. For educational purposes only.
               </p>
-              <p className="text-gray-500 dark:text-gray-400 text-xs mt-2 md:mt-0">
-                © {currentYear} Designed with ❤️ by Atharva Zope. All rights reserved.
-              </p>
+              
+              {/* Creative designer signature */}
+              <div className="designer-signature mt-4 md:mt-0 relative">
+                <div className="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 p-[2px] rounded-lg shadow-lg">
+                  <div className="bg-white dark:bg-gray-900 rounded-lg px-4 py-2 flex items-center">
+                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 font-bold text-base relative">
+                      DESIGNED BY
+                      <span className="block text-lg font-extrabold tracking-wide">ATHARVA ZOPE</span>
+                      <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500"></span>
+                    </div>
+                    <div className="ml-3 text-gray-700 dark:text-gray-300">
+                      <span className="text-xs">© {currentYear}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
