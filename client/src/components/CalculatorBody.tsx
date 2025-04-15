@@ -71,68 +71,92 @@ const CalculatorBody = () => {
 
       {/* Function buttons section with hover animation */}
       <div className="grid grid-cols-5 gap-2 mb-2">
-        {calculatorButtons.row1.map((button, index) => (
-          <CalculatorButton 
-            key={`row1-${index}`} 
-            {...button} 
-            className="calculator-button"
-          />
-        ))}
+        {calculatorButtons.row1.map((button, index) => {
+          const { type, ...restProps } = button;
+          return (
+            <CalculatorButton 
+              key={`row1-${index}`} 
+              {...restProps}
+              type={type as "default" | "shift" | "alpha" | "number" | "operator" | "function" | "clear" | "control"}
+              className="calculator-button"
+            />
+          );
+        })}
       </div>
 
       {/* Navigation and function keys */}
       <div className="grid grid-cols-5 gap-2 mb-1">
-        {calculatorButtons.row2.map((button, index) => (
-          <CalculatorButton 
-            key={`row2-${index}`} 
-            {...button}
-            className="calculator-button" 
-          />
-        ))}
+        {calculatorButtons.row2.map((button, index) => {
+          const { type, ...restProps } = button;
+          return (
+            <CalculatorButton 
+              key={`row2-${index}`} 
+              {...restProps}
+              type={type as "default" | "shift" | "alpha" | "number" | "operator" | "function" | "clear" | "control"}
+              className="calculator-button"
+            />
+          );
+        })}
       </div>
 
       {/* More function keys */}
       <div className="grid grid-cols-5 gap-2 mb-1">
-        {calculatorButtons.row3.map((button, index) => (
-          <CalculatorButton 
-            key={`row3-${index}`} 
-            {...button} 
-            className="calculator-button"
-          />
-        ))}
+        {calculatorButtons.row3.map((button, index) => {
+          const { type, ...restProps } = button;
+          return (
+            <CalculatorButton 
+              key={`row3-${index}`} 
+              {...restProps}
+              type={type as "default" | "shift" | "alpha" | "number" | "operator" | "function" | "clear" | "control"}
+              className="calculator-button"
+            />
+          );
+        })}
       </div>
 
       {/* Brackets and scientific functions */}
       <div className="grid grid-cols-5 gap-2 mb-1">
-        {calculatorButtons.row4.map((button, index) => (
-          <CalculatorButton 
-            key={`row4-${index}`} 
-            {...button} 
-            className="calculator-button"
-          />
-        ))}
+        {calculatorButtons.row4.map((button, index) => {
+          const { type, ...restProps } = button;
+          return (
+            <CalculatorButton 
+              key={`row4-${index}`} 
+              {...restProps}
+              type={type as "default" | "shift" | "alpha" | "number" | "operator" | "function" | "clear" | "control"}
+              className="calculator-button"
+            />
+          );
+        })}
       </div>
 
       {/* More scientific functions */}
       <div className="grid grid-cols-5 gap-2 mb-1">
-        {calculatorButtons.row5.map((button, index) => (
-          <CalculatorButton 
-            key={`row5-${index}`} 
-            {...button} 
-            className="calculator-button"
-          />
-        ))}
+        {calculatorButtons.row5.map((button, index) => {
+          const { type, ...restProps } = button;
+          return (
+            <CalculatorButton 
+              key={`row5-${index}`} 
+              {...restProps}
+              type={type as "default" | "shift" | "alpha" | "number" | "operator" | "function" | "clear" | "control"}
+              className="calculator-button"
+            />
+          );
+        })}
       </div>
 
       {/* Constants section */}
       <div className="grid grid-cols-5 gap-2 mb-1">
-        {calculatorButtons.row6.map((button, index) => (
-          <CalculatorButton 
-            key={`row6-${index}`} 
-            {...button} 
-            className="calculator-button"
-          />
-        ))}
+        {calculatorButtons.row6.map((button, index) => {
+          const { type, ...restProps } = button;
+          return (
+            <CalculatorButton 
+              key={`row6-${index}`} 
+              {...restProps}
+              type={type as "default" | "shift" | "alpha" | "number" | "operator" | "function" | "clear" | "control"}
+              className="calculator-button"
+            />
+          );
+        })}
       </div>
 
       {/* Numeric keypad section - Row 1 */}
