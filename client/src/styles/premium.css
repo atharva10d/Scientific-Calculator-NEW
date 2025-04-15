@@ -321,6 +321,10 @@ body {
 }
 
 /* Custom Cursor */
+.custom-cursor-active * {
+  cursor: none !important;
+}
+
 .custom-cursor {
   position: fixed;
   width: 20px;
@@ -331,7 +335,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 9999;
   mix-blend-mode: difference;
-  transition: width 0.2s, height 0.2s;
+  transition: transform 0.2s ease-out, background-color 0.3s ease;
 }
 
 .cursor-hover {
